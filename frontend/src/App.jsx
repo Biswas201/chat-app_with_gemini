@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
+import AppRoutes from "./routes/AppRoutes";
+import { UserProvider } from "./context/user.context.jsx";
 
-import './App.css'
-
-function App() {
-
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
+    <UserProvider>
+      <AppRoutes />
+    </UserProvider>
+  );
+};
 
-export default App
+export default App;
